@@ -1,0 +1,35 @@
+{
+  "name": "task-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-modules --es-module-specifier-resolution=node src/main/index.js",
+    "init": "node --experimental-modules --es-module-specifier-resolution=node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:make": "npx knex --knexfile src/infra/config/knexfile.js migrate:make",
+    "db:run": "npx knex --knexfile src/infra/config/knexfile.js migrate:latest",
+    "db:rollback": "npx knex --knexfile src/infra/config/knexfile.js migrate:rollback"
+  },
+  "keywords": [],
+  "author": "Francisco Viana <franciscoviana862@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.20.13",
+    "mysql": "^2.18.1",
+    "express": "^4.17.1",
+    "fast-glob": "^3.2.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2"
+  },
+  "engines": {
+    "node": ">= 14"
+  }
+}
