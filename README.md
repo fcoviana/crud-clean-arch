@@ -20,3 +20,8 @@
        └ index.js
  └ node_modules (generated)
 ```
+
+### Collections postman
+```
+https://www.getpostman.com/collections/38c42d79b5b312740bee
+```
