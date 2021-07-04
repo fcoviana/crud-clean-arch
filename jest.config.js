@@ -11,5 +11,10 @@ module.exports = {
     '!**/coverage/**',
     '!**/node_modules/**',
     '!**/test/**',
+    '!**/infra/web-server/**',
+    '!**/infra/orm/**',
+    '!**/infra/config/**',
+    '!**/infra/composers/**',
+    '!**/errors/**',
   ],
 };
