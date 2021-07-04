@@ -4,8 +4,8 @@ const {
   GetAllTasksRouterComposer,
   UpdateTaskRouterComposer,
   DeleteTaskRouterComposer
-} = require("../composers/task");
-const { adapt } = require("../adapters/express-router-adapter");
+} = require("../../composers/task");
+const { adapt } = require("../../adapters/express-router-adapter");
 
 const prefix = '/tasks';
 
