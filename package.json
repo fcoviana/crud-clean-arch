@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --experimental-modules --es-module-specifier-resolution=node src/main/index.js",
+    "start": "node src/infra/web-server/index.js",
     "init": "node --experimental-modules --es-module-specifier-resolution=node index.js",
     "test": "jest  --colors --noStackTrace --passWithNoTests --runInBand --coverage",
     "db:make": "npx knex --knexfile src/infra/config/knexfile.js migrate:make",
