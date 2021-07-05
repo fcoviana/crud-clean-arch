@@ -10,6 +10,10 @@ module.exports = class KnexBaseRepository extends BaseRepository {
     this.table = table;
   }
 
+  get conn() {
+    return this.queryBuilder;
+  }
+
   async create(data) {
     const entity = new this.entity(data);
     await this.queryBuilder(this.table).insert(entity);
