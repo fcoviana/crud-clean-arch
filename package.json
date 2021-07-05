@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/infra/web-server/index.js",
-    "init": "node --experimental-modules --es-module-specifier-resolution=node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test jest  --colors --noStackTrace --passWithNoTests --runInBand --detectOpenHandles --forceExit --coverage",
     "db:make": "npx knex --knexfile src/infra/config/knexfile.js migrate:make",
     "db:run": "npx knex --knexfile src/infra/config/knexfile.js migrate:latest",
     "db:rollback": "npx knex --knexfile src/infra/config/knexfile.js migrate:rollback"
@@ -19,14 +18,17 @@
     "mysql": "^2.18.1",
     "express": "^4.17.1",
     "fast-glob": "^3.2.5",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "dotenv": "^8.2.0",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
     "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.3",
     "prettier": "^2.1.2"
   },
   "engines": {
