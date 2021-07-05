@@ -16,5 +16,7 @@ module.exports = {
     '!**/infra/config/**',
     '!**/infra/composers/**',
     '!**/errors/**',
+    '!**/domain/**',
+    '!**/index.js',
   ],
 };
