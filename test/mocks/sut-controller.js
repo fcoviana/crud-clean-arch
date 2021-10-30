@@ -1,3 +1,8 @@
 module.exports = class SutControllerSpy {
-  handle = jest.fn();
+  async handle(httpRequest) {
+    return {
+      statusCode: 'any-code',
+      body: {},
+    };
+  }
 }
