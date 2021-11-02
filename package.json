@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/infra/web-server/index.js",
-    "test": "NODE_ENV=test jest  --colors --noStackTrace --passWithNoTests --runInBand --detectOpenHandles --forceExit --coverage",
+    "test": "NODE_ENV=test jest --silent --colors --noStackTrace --passWithNoTests --runInBand --detectOpenHandles --forceExit --coverage",
     "db:make": "npx knex --knexfile src/infra/config/knexfile.js migrate:make",
     "db:run": "npx knex --knexfile src/infra/config/knexfile.js migrate:latest",
     "db:rollback": "npx knex --knexfile src/infra/config/knexfile.js migrate:rollback"
